@@ -13,6 +13,8 @@ if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
 
 document.addEventListener('deviceready', function () {
     
+    adbuddiz.setAndroidPublisherKey("TEST_PUBLISHER_KEY_ANDROID");
+    
     AdMob.setOptions({
         isTesting: false,
     })
