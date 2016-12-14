@@ -10,6 +10,8 @@
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="~1.3.0" />
     <plugin name="cordova-plugin-admob-free" spec="~0.5" />
+    <plugin name="cordova-plugin-admob-mediation-facebook" spec="*" />
+    <plugin name="cordova-plugin-admob-mediation-adbuddiz" spec="*" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
