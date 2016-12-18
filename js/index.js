@@ -1,8 +1,8 @@
 var admobid = {}
 if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
     admobid = {
-        banner: 'ca-app-pub-3868593263837372/3312672648',
-        interstitial: 'ca-app-pub-3868593263837372/4789405842',
+        banner: 'ca-app-pub-3868593263837372/8649306643',
+        interstitial: 'ca-app-pub-3868593263837372/4224486649',
     }
 } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {  // for ios
     admobid = {
@@ -47,8 +47,6 @@ document.addEventListener('onReceiveInterstitialAd', function (event) {
 
 document.addEventListener('onDismissInterstitialAd', function (event) {
     console.log(event)
-
-    alert('onDismissInterstitialAd');
 
     AdMob.prepareInterstitial({
         interstitialAdId: admobid.interstitial,
