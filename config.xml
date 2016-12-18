@@ -11,7 +11,9 @@
     <preference name="permissions" value="none"/>
     <preference name="android-build-tool" value="gradle" /> 
     <gap:plugin name="cordova-plugin-admob-free" source="npm" />
-    <gap:plugin name="cordova-facebook-audnet-sdk" source="npm" />
+    
+    <gap:plugin name="cordova-facebook-sdk" source="npm" />
+    
     <gap:plugin name="cordova-plugin-admob-mediation-facebook" source="npm" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
