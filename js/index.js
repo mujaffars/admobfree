@@ -1,6 +1,5 @@
 var admobid = {}
 if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
-    alert(7888);
     admobid = {
         banner: 'ca-app-pub-3868593263837372/8649306643',
         interstitial: 'ca-app-pub-3868593263837372/4224486649',
@@ -8,10 +7,16 @@ if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
 }
 
 document.addEventListener('deviceready', function () {
-    
+
     AdMob.setOptions({
-        isTesting: false,
-    })
+        publisherId: admobid.banner,
+        interstitialAdId: admobid.interstitial,
+        bannerAtTop: false, // set to true, to put banner at top
+        overlap: true, // set to true, to allow banner overlap webview
+        offsetTopBar: false, // set to true to avoid ios7 status bar overlap
+        isTesting: false, // receiving test ad
+        autoShow: false  // auto show interstitial ad when loaded
+    });
 
     AdMob.createBannerView({
         isTesting: false,
@@ -24,7 +29,7 @@ document.addEventListener('deviceready', function () {
     })
 
     document.getElementById('showAd').disabled = true;
-    
+
     document.getElementById('showAd').onclick = function () {
         AdMob.showInterstitial()
     }
